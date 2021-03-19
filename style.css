@@ -119,6 +119,18 @@ form label {
     font-size: 0.9em;
 }
 
+form #submitButton {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--text-color);
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-size: inherit;
+    padding: 8px 30px;
+    border-radius: 3px;
+}
+
 form textarea {
     border: none;
 }
