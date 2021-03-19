@@ -2,10 +2,16 @@
     box-sizing: border-box;
 }
 
-#nun * {
+#aboutTab * {
     border-width: 1px;
     border-style: solid;
     border-color: red;
+}
+
+#aboutTab {
+    width: 100%;
+    height: 600px;
+    padding: 20px 18%;
 }
 
 #appbarActions {
@@ -18,6 +24,15 @@
     color: white;
     margin-right: 14px;
     cursor: pointer;
+}
+
+#backgroundImage {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/asaramahut.jpg');
+    background-size: cover;
+    padding: 16px 30px;
 }
 
 body {
