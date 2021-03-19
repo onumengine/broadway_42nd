@@ -2,8 +2,26 @@
     box-sizing: border-box;
 }
 
+#appbarActions {
+    list-style-type: none;
+}
+
 body {
     font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    font-weight: bold;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+#headerDivider {
+    margin-right:  70%;
+    margin-left: 30px;
+    border-top-width: 2px;
+    border-top-style: solid;
 }
 
 .hidden {
