@@ -5,3 +5,11 @@
 body {
     font-family: sans-serif;
 }
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
