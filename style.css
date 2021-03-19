@@ -73,6 +73,7 @@ body {
 
 .collectionItem {
     color: var(--text-color);
+    font-size: 0.9em;
 }
 
 .collectionItem h1 {
@@ -87,7 +88,8 @@ body {
     background-color: inherit;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--text-color);
+    border-color: #9CA3AF;
+    color: #4B5563;
     padding: 15px 20px;
 }
 
