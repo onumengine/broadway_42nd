@@ -127,8 +127,9 @@ form #submitButton {
     background-color: var(--accent-color);
     color: var(--text-color);
     font-size: inherit;
-    padding: 8px 30px;
+    padding: 8px 50px;
     border-radius: 3px;
+    margin: 10px 0;
 }
 
 form textarea {
