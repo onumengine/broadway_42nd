@@ -109,6 +109,20 @@ form {
     border-radius: 5px;
 }
 
+form input {
+    margin-bottom: 10px;
+    border: none;
+}
+
+form label {
+    color: var(--text-color);
+    font-size: 0.9em;
+}
+
+form textarea {
+    border: none;
+}
+
 header {
     font-weight: bold;
     margin-top: 60px;
