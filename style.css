@@ -201,3 +201,8 @@ header {
 .visible {
     display: block;
 }
+
+#sepPic {
+    width: unset;
+    height: unset;
+}
