@@ -8,7 +8,7 @@
     --text-color: #374151;
 }
 
-#nnun * {
+#nun * {
     border-width: 1px;
     border-style: solid;
     border-color: red;
@@ -169,12 +169,7 @@ header {
     border-top-style: solid;
 }
 
-.hidden {
-    display: none;
-}
-
-#homeTab {
-    margin: 0;
+#pictureGrid {
     padding: 40px 10%;
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -183,7 +178,7 @@ header {
     grid-column-gap: 20px;
 }
 
-#homeTab img {
+#pictureGrid img {
     height: 450px;
 }
 
@@ -198,11 +193,10 @@ header {
     align-items: top;
 }
 
-.visible {
-    display: block;
+.hidden {
+    display: none;
 }
 
-#sepPic {
-    width: unset;
-    height: unset;
+.visible {
+    display: block;
 }
