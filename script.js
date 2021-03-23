@@ -1,0 +1,1 @@
+document.querySelectorAll(".tabContent").forEach((element) => element.classList.add("hidden"));
