@@ -174,11 +174,12 @@ header {
 }
 
 #homeTab {
+    margin: 0;
     padding: 40px 10%;
     display: grid;
     grid-template-columns: 30% 30% 30%;
     grid-template-rows: 450px 450px 450px;
-    grid-row-gap: 20px;
+    grid-row-gap: 10px;
     grid-column-gap: 20px;
 }
 
