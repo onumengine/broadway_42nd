@@ -1,24 +1,33 @@
 //jshint esversion: 6
 
+var navbarButtons = document.querySelectorAll("#appbarActions li");
+console.log(navbarButtons);
 
-var page = {
-    allTabs: document.querySelectorAll(".tabContent"),
-    homeTab: document.querySelector("#homeTab"),
-    aboutTab: document.querySelector("#aboutTab"),
-    hideAllTabs() {
-        this.allTabs.forEach((element) => element.classList.add("hidden"));
-    },
-    showElement(elementId) {
-        document.querySelector(elementId).classList.add("visible");
-    },
-    toggleVisibility(elementId) {
-        document.querySelector(elementId).classList.toggle("hidden");
+navbarButtons.forEach((button) => {button.addEventListener("click", showTabById);});
+
+hideAllTabs();
+
+function hideAllTabs() {
+    var allTabsInPage = document.querySelectorAll(".tabContent");
+    console.log(allTabsInPage);
+    allTabsInPage.forEach((element) => {
+        element.classList.add("hidden");
+    });
+}
+
+function showTabById(event) {
+    console.log(`the ${event.target.id} was clicked`);
+    switch(event.target.id) {
+        case "homeButton":
+            showTab("homeTab");
+            break;
+        case "aboutButton":
+            showTab("aboutTab");
     }
-};
+}
 
-document.querySelector("#aboutButton").addEventListener("click", () => {
-    page.toggleVisibility("#aboutTab");
-});
-
-page.hideAllTabs();
-page.showElement("#homeTab");
+function showTab(tabId) {
+    console.log(`making the ${tabId} visible...`);
+    document.getElementById(tabId).classList.add("visible");
+    console.log(`attempt to display ${tabId} complete`);
+}
