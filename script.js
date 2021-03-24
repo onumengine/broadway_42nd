@@ -52,5 +52,5 @@ console.log(navbarButtons);
 
 navbarButtons.forEach((button) => {button.addEventListener("click", tabManager.showTabById);});
 
-tabManager.hideAllTabs();
+tabManager.showTab(elementsIds.homeTab);
 
