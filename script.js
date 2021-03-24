@@ -14,14 +14,14 @@ const elementsIds = {
 var tabManager = {
     hideAllTabs: function() {
         var allTabsInPage = document.querySelectorAll(".tabContent");
-        console.log(allTabsInPage);
+        //console.log(allTabsInPage);
         allTabsInPage.forEach((tab) => {
             tab.classList.remove("visible");
             tab.classList.add("hidden");
         });
     },
     showTabById: function(event) {
-        console.log(`the ${event.target.id} was clicked`);
+        //console.log(`the ${event.target.id} was clicked`);
         switch(event.target.id) {
             case elementsIds.homeButton:
                 tabManager.showTab(elementsIds.homeTab);
@@ -41,14 +41,14 @@ var tabManager = {
     },
     showTab: function(tabId) {
         this.hideAllTabs();
-        console.log(`making the ${tabId} visible...`);
+        //console.log(`making the ${tabId} visible...`);
         document.getElementById(tabId).classList.add("visible");
-        console.log(`attempt to display ${tabId} complete`);
+        //console.log(`attempt to display ${tabId} complete`);
     }
 };
 
 var navbarButtons = document.querySelectorAll("#appbarActions li");
-console.log(navbarButtons);
+//console.log(navbarButtons);
 
 navbarButtons.forEach((button) => {button.addEventListener("click", tabManager.showTabById);});
 
