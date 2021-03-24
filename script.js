@@ -21,8 +21,9 @@ hideAllTabs();
 function hideAllTabs() {
     var allTabsInPage = document.querySelectorAll(".tabContent");
     console.log(allTabsInPage);
-    allTabsInPage.forEach((element) => {
-        element.classList.add("hidden");
+    allTabsInPage.forEach((tab) => {
+        tab.classList.remove("visible");
+        tab.classList.add("hidden");
     });
 }
 
@@ -47,6 +48,7 @@ function showTabById(event) {
 }
 
 function showTab(tabId) {
+    hideAllTabs();
     console.log(`making the ${tabId} visible...`);
     document.getElementById(tabId).classList.add("visible");
     console.log(`attempt to display ${tabId} complete`);
