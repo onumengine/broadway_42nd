@@ -11,45 +11,46 @@ const elementsIds = {
     portfolioTab: "portfolioTab",
 };
 
+var tabManager = {
+    hideAllTabs: function() {
+        var allTabsInPage = document.querySelectorAll(".tabContent");
+        console.log(allTabsInPage);
+        allTabsInPage.forEach((tab) => {
+            tab.classList.remove("visible");
+            tab.classList.add("hidden");
+        });
+    },
+    showTabById: function(event) {
+        console.log(`the ${event.target.id} was clicked`);
+        switch(event.target.id) {
+            case elementsIds.homeButton:
+                tabManager.showTab(elementsIds.homeTab);
+                break;
+            case elementsIds.aboutButton:
+                tabManager.showTab(elementsIds.aboutTab);
+                break;
+            case elementsIds.portfolioButton:
+                tabManager.showTab(elementsIds.portfolioTab);
+                break;
+            case elementsIds.contactButton:
+                tabManager.showTab(elementsIds.contactTab);
+                break;
+            default:
+                console.log("Switch statement couldn't find a condition");
+        }
+    },
+    showTab: function(tabId) {
+        this.hideAllTabs();
+        console.log(`making the ${tabId} visible...`);
+        document.getElementById(tabId).classList.add("visible");
+        console.log(`attempt to display ${tabId} complete`);
+    }
+};
+
 var navbarButtons = document.querySelectorAll("#appbarActions li");
 console.log(navbarButtons);
 
-navbarButtons.forEach((button) => {button.addEventListener("click", showTabById);});
+navbarButtons.forEach((button) => {button.addEventListener("click", tabManager.showTabById);});
 
-hideAllTabs();
+tabManager.hideAllTabs();
 
-function hideAllTabs() {
-    var allTabsInPage = document.querySelectorAll(".tabContent");
-    console.log(allTabsInPage);
-    allTabsInPage.forEach((tab) => {
-        tab.classList.remove("visible");
-        tab.classList.add("hidden");
-    });
-}
-
-function showTabById(event) {
-    console.log(`the ${event.target.id} was clicked`);
-    switch(event.target.id) {
-        case elementsIds.homeButton:
-            showTab(elementsIds.homeTab);
-            break;
-        case elementsIds.aboutButton:
-            showTab(elementsIds.aboutTab);
-            break;
-        case elementsIds.portfolioButton:
-            showTab(elementsIds.portfolioTab);
-            break;
-        case elementsIds.contactButton:
-            showTab(elementsIds.contactTab);
-            break;
-        default:
-            console.log("Switch statement couldn't find a condition");
-    }
-}
-
-function showTab(tabId) {
-    hideAllTabs();
-    console.log(`making the ${tabId} visible...`);
-    document.getElementById(tabId).classList.add("visible");
-    console.log(`attempt to display ${tabId} complete`);
-}
