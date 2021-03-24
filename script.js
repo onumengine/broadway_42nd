@@ -26,10 +26,19 @@ function showTabById(event) {
     console.log(`the ${event.target.id} was clicked`);
     switch(event.target.id) {
         case "homeButton":
-            showTab("homeTab");
+            showTab(tabIds.homeTab);
             break;
         case "aboutButton":
-            showTab("aboutTab");
+            showTab(tabIds.aboutTab);
+            break;
+        case "portfolioButton":
+            showTab(tabIds.portfolioTab);
+            break;
+        case "contactButton":
+            showTab(tabIds.contactTab);
+            break;
+        default:
+            console.log("Switch statement couldn't find a condition");
     }
 }
 
