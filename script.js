@@ -55,3 +55,5 @@ function main() {
 
     tabManager.showTab(elementsIds.homeTab);
 }
+
+window.onload = main;
