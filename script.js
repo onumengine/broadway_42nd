@@ -1,10 +1,14 @@
 //jshint esversion: 6
 
-const tabIds = {
-    homeTab: "homeTab",
+const elementsIds = {
+    aboutButton: "aboutButton",
+    contactButton: "contactButton",
+    homeButton: "homeButton",
+    portfolioButton: "portfolioButton",
     aboutTab: "aboutTab",
-    portfolioTab: "portfolioTab",
     contactTab: "contactTab",
+    homeTab: "homeTab",
+    portfolioTab: "portfolioTab",
 };
 
 var navbarButtons = document.querySelectorAll("#appbarActions li");
@@ -26,16 +30,16 @@ function showTabById(event) {
     console.log(`the ${event.target.id} was clicked`);
     switch(event.target.id) {
         case "homeButton":
-            showTab(tabIds.homeTab);
+            showTab(elementsIds.homeTab);
             break;
         case "aboutButton":
-            showTab(tabIds.aboutTab);
+            showTab(elementsIds.aboutTab);
             break;
         case "portfolioButton":
-            showTab(tabIds.portfolioTab);
+            showTab(elementsIds.portfolioTab);
             break;
         case "contactButton":
-            showTab(tabIds.contactTab);
+            showTab(elementsIds.contactTab);
             break;
         default:
             console.log("Switch statement couldn't find a condition");
