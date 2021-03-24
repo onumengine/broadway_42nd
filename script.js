@@ -47,10 +47,11 @@ const tabManager = {
     }
 };
 
-var navbarButtons = document.querySelectorAll("#appbarActions li");
-//console.log(navbarButtons);
+function main() {
+    var navbarButtons = document.querySelectorAll("#appbarActions li");
+    //console.log(navbarButtons);
 
-navbarButtons.forEach((button) => {button.addEventListener("click", tabManager.showTabById);});
+    navbarButtons.forEach((button) => {button.addEventListener("click", tabManager.showTabById);});
 
-tabManager.showTab(elementsIds.homeTab);
-
+    tabManager.showTab(elementsIds.homeTab);
+}
