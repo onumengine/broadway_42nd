@@ -29,16 +29,16 @@ function hideAllTabs() {
 function showTabById(event) {
     console.log(`the ${event.target.id} was clicked`);
     switch(event.target.id) {
-        case "homeButton":
+        case elementsIds.homeButton:
             showTab(elementsIds.homeTab);
             break;
-        case "aboutButton":
+        case elementsIds.aboutButton:
             showTab(elementsIds.aboutTab);
             break;
-        case "portfolioButton":
+        case elementsIds.portfolioButton:
             showTab(elementsIds.portfolioTab);
             break;
-        case "contactButton":
+        case elementsIds.contactButton:
             showTab(elementsIds.contactTab);
             break;
         default:
