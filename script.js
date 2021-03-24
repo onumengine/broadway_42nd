@@ -11,7 +11,7 @@ const elementsIds = {
     portfolioTab: "portfolioTab",
 };
 
-var tabManager = {
+const tabManager = {
     hideAllTabs: function() {
         var allTabsInPage = document.querySelectorAll(".tabContent");
         //console.log(allTabsInPage);
