@@ -1,5 +1,12 @@
 //jshint esversion: 6
 
+const tabIds = {
+    homeTab: "homeTab",
+    aboutTab: "aboutTab",
+    portfolioTab: "portfolioTab",
+    contactTab: "contactTab",
+};
+
 var navbarButtons = document.querySelectorAll("#appbarActions li");
 console.log(navbarButtons);
 
