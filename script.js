@@ -2,6 +2,11 @@
 
 const navDrawerOpenButton = document.querySelector("#navDrawerOpenButton");
 console.log(navDrawerOpenButton);
+navDrawerOpenButton.addEventListener("click", ()=>{
+    var appbarActions = document.querySelector("#appbarActions");
+    console.log(appbarActions);
+    appbarActions.style.width = "80%";
+});
 
 const elementsIds = {
     aboutButton: "aboutButton",
