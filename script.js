@@ -1,11 +1,16 @@
 //jshint esversion: 6
 
 const navDrawerOpenButton = document.querySelector("#navDrawerOpenButton");
-console.log(navDrawerOpenButton);
-navDrawerOpenButton.addEventListener("click", ()=>{
+navDrawerOpenButton.addEventListener("click", () => {
     var appbarActions = document.querySelector("#appbarActions");
-    console.log(appbarActions);
     appbarActions.style.width = "80%";
+});
+
+const navDrawerCloseButton = document.querySelector("#navDrawerCloseButton");
+console.log(navDrawerCloseButton);
+navDrawerCloseButton.addEventListener("click", () => {
+    var appbarActions = document.querySelector("#appbarActions");
+    appbarActions.style.width = "0%";
 });
 
 const elementsIds = {
