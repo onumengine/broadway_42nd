@@ -175,6 +175,10 @@ header {
     border-top-style: solid;
 }
 
+#navDrawerOpenButton {
+    display: none;
+}
+
 #pictureGrid {
     padding: 40px 10%;
     display: grid;
