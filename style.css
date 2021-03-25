@@ -200,3 +200,15 @@ header {
 .visible {
     display: block;
 }
+
+@media(max-device-width: 592px) {
+
+    #navbar {
+        width: 100%;
+        font-size: 3rem;
+    }
+
+    #navbar>* {
+        width: 100%;
+    }
+}
