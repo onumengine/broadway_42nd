@@ -53,6 +53,9 @@ const tabManager = {
     showTab: function(tabId) {
         this.hideAllTabs();
         document.getElementById(tabId).classList.add("visible");
+        if (outerWidth <= 592 && document.querySelector("#appbarActions").style.width !== "0") {
+            document.querySelector("#appbarActions").style.width = "0";
+        }
     }
 };
 
