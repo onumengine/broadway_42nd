@@ -230,6 +230,7 @@ header {
         display: block;
         text-align: center;
         margin: 0;
+        clear: right;
     }
 
     header {
@@ -252,10 +253,24 @@ header {
         width: 100%;
     }
 
+    .navCloseButtonBar {
+        margin: 0 20px;
+        color: white;
+        font-size: 5rem;
+    }
+
     .navDrawerButtonBar {
         background-color: black;
         height: 10px;
         width: 80px;
+        margin: 20px;
+    }
+
+    #navDrawerCloseButton {
+        display: block;
+        text-align: end;
+        max-width: fit-content;
+        float: right;
         margin: 20px;
     }
 
