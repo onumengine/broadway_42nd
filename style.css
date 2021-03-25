@@ -8,7 +8,13 @@
     --text-color: #374151;
 }
 
-#nun * {
+#appbarActions {
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+}
+
+#appbarActions * {
     border-width: 1px;
     border-style: solid;
     border-color: red;
@@ -203,8 +209,32 @@ header {
 
 @media(max-device-width: 592px) {
 
+    /*
+    #appbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 1fr;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    */
+
+    #appbarActions {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 80%;
+        background-color: black;
+        opacity: 0.9;
+        padding: 0;
+    }
+
     #appbarActions li {
         display: block;
+        text-align: center;
+        margin: 0;
     }
 
     #navbar {
@@ -214,5 +244,17 @@ header {
 
     #navbar>* {
         width: 100%;
+    }
+
+    #pictureGrid {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    #pictureGrid img {
+        height: unset;
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
