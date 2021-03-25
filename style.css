@@ -213,17 +213,6 @@ header {
 
 @media(max-device-width: 592px) {
 
-    /*
-    #appbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 1fr;
-        height: 100%;
-        overflow-x: hidden;
-    }
-    */
-
     #appbarActions {
         position: fixed;
         left: 0;
