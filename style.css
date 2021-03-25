@@ -203,6 +203,10 @@ header {
 
 @media(max-device-width: 592px) {
 
+    #appbarActions li {
+        display: block;
+    }
+
     #navbar {
         width: 100%;
         font-size: 3rem;
