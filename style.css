@@ -214,7 +214,7 @@ header {
         height: 100%;
         width: 0;
         background-color: black;
-        opacity: 0.9;
+        opacity: 0.93;
         padding: 0;
         overflow-x: hidden;
         transition: 1s;
@@ -234,6 +234,10 @@ header {
         max-width: fit-content;
         float: right;
         margin-top: 60px;
+    }
+
+    #headerDivider {
+        margin: 0;
     }
 
     #navbar {
