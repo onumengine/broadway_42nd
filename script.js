@@ -1,5 +1,8 @@
 //jshint esversion: 6
 
+const navDrawerOpenButton = document.querySelector("#navDrawerOpenButton");
+console.log(navDrawerOpenButton);
+
 const elementsIds = {
     aboutButton: "aboutButton",
     contactButton: "contactButton",

@@ -218,12 +218,12 @@ header {
         left: 0;
         top: 0;
         height: 100%;
-        width: 80%;
+        width: 0;
         background-color: black;
         opacity: 0.9;
         padding: 0;
-        width: 0;
         overflow-x: hidden;
+        transition: 1s;
     }
 
     #appbarActions li {
@@ -232,9 +232,20 @@ header {
         margin: 0;
     }
 
+    header {
+        margin: 0;
+        padding: 0;
+        max-width: fit-content;
+        float: right;
+        margin-top: 60px;
+    }
+
     #navbar {
+        position: sticky;
+        top: 0;
         width: 100%;
         font-size: 3rem;
+        background-color: white;
     }
 
     #navbar > * {
@@ -252,6 +263,7 @@ header {
         display: inline-block;
         margin-left: 20px;
         margin-top: 20px;
+        max-width: fit-content;
     }
 
     #pictureGrid {
