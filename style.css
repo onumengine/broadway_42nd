@@ -228,6 +228,13 @@ header {
         padding: 40px;
     }
 
+    footer {
+        height: fit-content;
+        text-align: start;
+        padding: 50px 400px 50px 20px;
+        font-size: 3em;
+    }
+
     header {
         margin: 0;
         padding: 0;
