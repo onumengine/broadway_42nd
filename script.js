@@ -25,11 +25,17 @@ const elementsIds = {
 };
 
 const tabManager = {
+    navbarButtons: document.querySelectorAll("#appbarActions li"),
     activateTabButton: function(button){
+        tabManager.navbarButtons.forEach((button) => {
+            button.style.backgroundColor = "black";
+        });
         button.style.backgroundColor = "#b8860b";
     },
-    deactivateTabButton: function(button){
-        button.style.backgroundColor = "black";
+    addListenersToTabButtons: function() {
+        tabManager.navbarButtons.forEach((button) => {
+            button.addEventListener("click", tabManager.showTabById);
+        });
     },
     hideAllTabs: function() {
         var allTabsInPage = document.querySelectorAll(".tabContent");
@@ -81,11 +87,8 @@ var form = {
 
 
 function main() {
-    var navbarButtons = document.querySelectorAll("#appbarActions li");
 
-    navbarButtons.forEach((button) => {
-        button.addEventListener("click", tabManager.showTabById);
-    });
+    tabManager.addListenersToTabButtons();
 
     tabManager.showTab(elementsIds.homeTab);
 
