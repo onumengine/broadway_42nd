@@ -59,6 +59,21 @@ const tabManager = {
     }
 };
 
+var form = {
+    textArea: document.querySelector("#formTextArea"),
+    decideToResizeForm: function() {
+        if (innerWidth <= 592) {
+            form.resizeFormTextArea();
+        }
+    },
+    resizeFormTextArea: function() {
+        form.textArea.setAttribute("cols", "100");
+        form.textArea.setAttribute("rows", "50");
+    }
+};
+
+
+
 function main() {
     var navbarButtons = document.querySelectorAll("#appbarActions li");
 
@@ -67,6 +82,9 @@ function main() {
     });
 
     tabManager.showTab(elementsIds.homeTab);
+
+    decideToResizeForm();
 }
 
 window.onload = main;
+window.onresize = decideToResizeForm;
