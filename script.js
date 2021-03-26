@@ -25,18 +25,24 @@ const elementsIds = {
 };
 
 const tabManager = {
+
     navbarButtons: document.querySelectorAll("#appbarActions li"),
-    activateTabButton: function(button){
-        tabManager.navbarButtons.forEach((button) => {
-            button.style.backgroundColor = "black";
+
+    activateButtonWithId: function(buttonId){
+        tabManager.navbarButtons.forEach((navButton) => {
+            navButton.style.backgroundColor = "black";
+            navButton.style.color = "white";
         });
-        button.style.backgroundColor = "#b8860b";
+        document.getElementById(buttonId).style.backgroundColor = "#B8860B";
+        document.getElementById(buttonId).style.color = "black";
     },
+
     addListenersToTabButtons: function() {
         tabManager.navbarButtons.forEach((button) => {
             button.addEventListener("click", tabManager.showTabById);
         });
     },
+
     hideAllTabs: function() {
         var allTabsInPage = document.querySelectorAll(".tabContent");
         allTabsInPage.forEach((tab) => {
@@ -44,6 +50,7 @@ const tabManager = {
             tab.classList.add("hidden");
         });
     },
+
     showTab: function(tabId) {
         this.hideAllTabs();
         document.getElementById(tabId).classList.add("visible");
@@ -51,7 +58,9 @@ const tabManager = {
             document.querySelector("#appbarActions").style.width = "0";
         }
     },
+    
     showTabById: function(event) {
+        tabManager.activateButtonWithId(event.target.id);
         switch(event.target.id) {
             case elementsIds.homeButton:
                 tabManager.showTab(elementsIds.homeTab);
@@ -91,6 +100,8 @@ function main() {
     tabManager.addListenersToTabButtons();
 
     tabManager.showTab(elementsIds.homeTab);
+
+    tabManager.activateButtonWithId(elementsIds.homeButton);
 
     form.decideToResizeForm();
 }
