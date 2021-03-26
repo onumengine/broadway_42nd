@@ -17,7 +17,7 @@ const elementsIds = {
     aboutButton: "aboutButton",
     contactButton: "contactButton",
     homeButton: "homeButton",
-    portfolioButton: "portfolioButton",
+    collectionsButton: "collectionsButton",
     aboutTab: "aboutTab",
     contactTab: "contactTab",
     homeTab: "homeTab",
@@ -40,7 +40,7 @@ const tabManager = {
             case elementsIds.aboutButton:
                 tabManager.showTab(elementsIds.aboutTab);
                 break;
-            case elementsIds.portfolioButton:
+            case elementsIds.collectionsButton:
                 tabManager.showTab(elementsIds.portfolioTab);
                 break;
             case elementsIds.contactButton:
