@@ -113,8 +113,8 @@ body {
     border-left-width: 4px;
     color: var(--text-color);
     width: 400px;
-    padding-left: 8px;
     margin-top: 3px;
+    padding-left: 8px;
     padding-top: 3px;
     padding-bottom: 3px;
 }
@@ -289,6 +289,10 @@ header {
         margin: 20px 0;
     }
 
+    #contactTab p {
+        border: none;
+    }
+
     footer {
         height: fit-content;
         text-align: start;
@@ -297,7 +301,7 @@ header {
     }
 
     form {
-        margin: 0;
+        margin: 0 0 40px;
         border-radius: 16px;
     }
 
