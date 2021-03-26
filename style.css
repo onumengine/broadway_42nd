@@ -291,6 +291,13 @@ header {
 
     #contactTab p {
         border: none;
+        padding-left: 0;
+        padding-top: 30px;
+        width: unset;
+        font-size: 3em;
+        border-top-color: #9CA3AF;
+        border-top-style: solid;
+        border-top-width: 4px;
     }
 
     footer {
