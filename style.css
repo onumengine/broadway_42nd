@@ -298,9 +298,11 @@ header {
 
     form {
         margin: 0;
+        border-radius: 16px;
     }
 
     form input {
+        margin-top: 20px;
         margin-bottom: 50px;
         height: 100px;
         width: 100%;
@@ -308,6 +310,17 @@ header {
 
     form label {
         font-size: 3em;
+    }
+
+    form #submitButton {
+        font-size: 3em;
+        margin-top: 50px;
+        height: 150px;
+        border-radius: 16px;
+    }
+
+    form textarea {
+        margin-top: 20px;
     }
 
     header {
