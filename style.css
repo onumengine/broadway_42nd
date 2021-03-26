@@ -93,6 +93,10 @@ body {
     padding: 15px 20px;
 }
 
+#collectionsTab {
+    padding: 20px 20%;
+}
+
 #contactTab {
     padding: 80px 28px;
 }
@@ -186,10 +190,6 @@ header {
     height: 450px;
 }
 
-#collectionsTab {
-    padding: 20px 20%;
-}
-
 .row {
     display: flex;
     flex-direction: row;
@@ -249,6 +249,19 @@ header {
         margin: 0;
         clear: right;
         padding: 40px;
+    }
+
+    .collectionItem h1 {
+        font-size: 4.5rem;
+    }
+
+    #collectionsTab {
+        padding: 20px 40px;
+    }
+
+    #collectionsTab h2 {
+        font-size: 4em;
+        font-weight: normal;
     }
 
     footer {
