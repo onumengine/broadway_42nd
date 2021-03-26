@@ -207,6 +207,29 @@ header {
 
 @media(max-device-width: 592px) {
 
+    #aboutCard {
+        border-radius: 10px;
+        margin: 80px 0;
+        padding: 40px 40px;
+    }
+
+    #aboutCard h3 {
+        font-size: 3em;
+    }
+
+    #aboutCard p {
+        font-size: 2em;
+    }
+
+    #aboutTab {
+        padding: 0;
+    }
+
+    #aboutTab h1 {
+        font-size: 6em;
+        margin-top: 40px;
+    }
+
     #appbarActions {
         position: fixed;
         left: 0;
