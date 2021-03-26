@@ -21,7 +21,7 @@ const elementsIds = {
     aboutTab: "aboutTab",
     contactTab: "contactTab",
     homeTab: "homeTab",
-    portfolioTab: "portfolioTab",
+    collectionsTab: "collectionsTab",
 };
 
 const tabManager = {
@@ -41,7 +41,7 @@ const tabManager = {
                 tabManager.showTab(elementsIds.aboutTab);
                 break;
             case elementsIds.collectionsButton:
-                tabManager.showTab(elementsIds.portfolioTab);
+                tabManager.showTab(elementsIds.collectionsTab);
                 break;
             case elementsIds.contactButton:
                 tabManager.showTab(elementsIds.contactTab);
@@ -62,7 +62,9 @@ const tabManager = {
 function main() {
     var navbarButtons = document.querySelectorAll("#appbarActions li");
 
-    navbarButtons.forEach((button) => {button.addEventListener("click", tabManager.showTabById);});
+    navbarButtons.forEach((button) => {
+        button.addEventListener("click", tabManager.showTabById);
+    });
 
     tabManager.showTab(elementsIds.homeTab);
 }
