@@ -300,6 +300,16 @@ header {
         margin: 0;
     }
 
+    form input {
+        margin-bottom: 50px;
+        height: 100px;
+        width: 100%;
+    }
+
+    form label {
+        font-size: 3em;
+    }
+
     header {
         margin: 0;
         padding: 0;
