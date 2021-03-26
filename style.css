@@ -251,8 +251,19 @@ header {
         padding: 40px;
     }
 
+    .collectionItem {
+        font-size: 1.8em;
+    }
+
+    .collectionItem button {
+        margin: 50px 0;
+        border-width: 2px;
+        font-size: 2em;
+    }
+
     .collectionItem h1 {
         font-size: 4.5rem;
+        padding: 50px 0 25px;
     }
 
     #collectionsTab {
