@@ -62,12 +62,12 @@ const tabManager = {
 var form = {
     textArea: document.querySelector("#formTextArea"),
     decideToResizeForm: function() {
-        if (innerWidth <= 592) {
+        if (outerWidth <= 592) {
             form.resizeFormTextArea();
         }
     },
     resizeFormTextArea: function() {
-        form.textArea.setAttribute("cols", "100");
+        form.textArea.setAttribute("cols", "103");
         form.textArea.setAttribute("rows", "50");
     }
 };
@@ -83,8 +83,8 @@ function main() {
 
     tabManager.showTab(elementsIds.homeTab);
 
-    decideToResizeForm();
+    form.decideToResizeForm();
 }
 
 window.onload = main;
-window.onresize = decideToResizeForm;
+window.onresize = form.decideToResizeForm;
