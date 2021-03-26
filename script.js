@@ -15,22 +15,35 @@ navDrawerCloseButton.addEventListener("click", () => {
 
 const elementsIds = {
     aboutButton: "aboutButton",
+    collectionsButton: "collectionsButton",
     contactButton: "contactButton",
     homeButton: "homeButton",
-    collectionsButton: "collectionsButton",
     aboutTab: "aboutTab",
+    collectionsTab: "collectionsTab",
     contactTab: "contactTab",
     homeTab: "homeTab",
-    collectionsTab: "collectionsTab",
 };
 
 const tabManager = {
+    activateTabButton: function(button){
+        button.style.backgroundColor = "#b8860b";
+    },
+    deactivateTabButton: function(button){
+        button.style.backgroundColor = "black";
+    },
     hideAllTabs: function() {
         var allTabsInPage = document.querySelectorAll(".tabContent");
         allTabsInPage.forEach((tab) => {
             tab.classList.remove("visible");
             tab.classList.add("hidden");
         });
+    },
+    showTab: function(tabId) {
+        this.hideAllTabs();
+        document.getElementById(tabId).classList.add("visible");
+        if (outerWidth <= 592 && document.querySelector("#appbarActions").style.width !== "0") {
+            document.querySelector("#appbarActions").style.width = "0";
+        }
     },
     showTabById: function(event) {
         switch(event.target.id) {
@@ -48,13 +61,6 @@ const tabManager = {
                 break;
             default:
                 console.log("Switch statement couldn't find a condition");
-        }
-    },
-    showTab: function(tabId) {
-        this.hideAllTabs();
-        document.getElementById(tabId).classList.add("visible");
-        if (outerWidth <= 592 && document.querySelector("#appbarActions").style.width !== "0") {
-            document.querySelector("#appbarActions").style.width = "0";
         }
     }
 };
